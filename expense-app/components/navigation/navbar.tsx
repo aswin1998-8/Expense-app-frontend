@@ -31,7 +31,7 @@ const Navbar = () => {
                 Login 
                 </span>
                 
-                <AppPrimaryButton onClick={() => {}}>
+                <AppPrimaryButton className="px-4" onClick={() => {}}>
                     Sign Up
                 </AppPrimaryButton>
 

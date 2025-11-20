@@ -1,10 +1,10 @@
 "use client";
-import React from "react";
 import AppPrimaryButton from "../../../components/appPrimaryButton/appPrimaryButton";
 import CheckIcon from "../../../components/icons/checkicon"
+import ArrowIcon from "../../../components/icons/arrowicon"
 const ExpenseTracker = () => {
     return (
-       <div className="mt-60">
+       <div className="mt-50">
         <div className="max-w-6xl mx-auto mx-6 my-4">
             <div className="flex items-center justify-between my-8">
                 <div className="w-1/2">
@@ -16,23 +16,36 @@ const ExpenseTracker = () => {
                     </div>
                     <div className="mt-6 flex  col-2">
                         <div className="p-1">
-                        <AppPrimaryButton className="w-46 h-16" onClick={() => {}}>
+                        <AppPrimaryButton className="w-52 h-16 flex items-center justify-center" onClick={() => {}}>
+                            <div className="flex gap-2 items-center justify-center">
                             Get Started Free
+                            <ArrowIcon></ArrowIcon>
+                            </div>
                         </AppPrimaryButton>
                         </div>
                         <div className="p-1 pl-4">
-                        <button className="bg-[white] text-md font-medium px-4 py-2 border rounded-md hover:cursor-pointer w-32 h-16">
+                        <button className="border-2 border-gray-300 hover:border-gray-400 text-gray-700 px-8 py-4 rounded-lg font-semibold text-lg transition">
                             Sign In
                         </button>
                         </div>
                         
                     </div>
-                    <div className="mt-1 flex  col-2">
-                        <div className="p-1 flex">
-                        <CheckIcon></CheckIcon><p className="text-sm pl-2">No credit card required</p>
+                    <div className="mt-6 flex  col-2 pl-1">
+                        <div className="flex items-center justify-center">
+                            <div>
+                            <CheckIcon></CheckIcon>
+                            </div>
+                            <div>
+                                <p className="text-sm pl-2">No credit card required</p>
+                            </div>
                         </div>
-                        <div className="p-1 flex">
-                        <CheckIcon></CheckIcon><p className="text-sm pl-2">Free forever</p>
+                        <div className="pl-6 flex items-center  justify-center">
+                        <div>
+                           <CheckIcon></CheckIcon>
+                        </div>
+                        <div>
+                           <p className="text-sm pl-2">Free forever</p>
+                        </div>
                         </div>
                     </div>
                 </div>

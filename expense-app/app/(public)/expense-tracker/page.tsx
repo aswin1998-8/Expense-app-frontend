@@ -2,9 +2,14 @@
 import AppPrimaryButton from "../../../components/appPrimaryButton/appPrimaryButton";
 import CheckIcon from "../../../components/icons/checkicon"
 import ArrowIcon from "../../../components/icons/arrowicon"
+import ChartIcon from "../../../components/icons/charticon"
+import PieChartIcon from "../../../components/icons/piecharticon"
+import MobileIcon from "../../../components/icons/mobileicon"
+import LockIcon from "../../../components/icons/lockicon"
+import Image from "next/image"
 const ExpenseTracker = () => {
     return (
-       <div className="mt-50">
+       <div className="bg-[#F9FAFB] pt-25">
         <div className="max-w-6xl mx-auto mx-6 my-4">
             <div className="flex items-center justify-between my-8">
                 <div className="w-1/2">
@@ -49,18 +54,78 @@ const ExpenseTracker = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-1/2">
-                    image tag div
-                </div>
+               <div className="w-1/2 relative">           
+                    <div className="w-full">
+                        <Image
+                            src="/calculator-image.jpg"
+                            alt="Calculator app interface showing financial calculations"
+                            width={1200}
+                            height={800}
+                            sizes="100vw"
+                            style={{ width: '100%', height: 'auto' }}
+                            className="rounded-lg"
+                            priority
+                        />
+                    </div>
+                    <div className="absolute -bottom-8 -left-6 bg-white rounded-xl shadow-xl p-3 flex items-center gap-3">
+                        <div className="p-3 rounded-lg">
+                            <ChartIcon  />
+                        </div>
+                        <div>
+                            <p className="text-sm text-gray-500">Monthly Savings</p>
+                            <p className="text-xl font-bold text-gray-900">+$1,265</p>
+                        </div>
+                    </div>
+              </div>
             </div>
-            <div>
-                Three cards div
+            <div className="flex items-center justify-center mt-25">
+                <div className="w-1/3 bg-white h-55 rounded-md shadow-md mr-6 p-6">
+                    <div>
+                        <PieChartIcon></PieChartIcon>
+                    </div>
+                    <div className="pt-4">
+                        <div className="text-xl font-semibold">
+                            Smart Analytics
+                        </div>
+                        <div className="text-md  text-gray-600 pt-4">
+                            Get detailed insights into your spending patterns and income sources with beautiful charts.
+                        </div>
+                    </div>
+                </div>
+                <div className="w-1/3 h-55 bg-white rounded-lg shadow-md mr-6 p-6">
+                    <div>
+                        <MobileIcon></MobileIcon>
+                    </div>
+                    <div className="pt-4">
+                        <div className="text-xl font-semibold">
+                            Mobile Friendly
+                        </div>
+                        <div className="text-md text-gray-600 pt-4">
+                            Track your finances on the go with our fully responsive mobile-optimized design.
+                        </div>    
+                    </div>
+                    </div>
+                     <div className="w-1/3 h-55  bg-white rounded-lg shadow-md p-6">
+                    <div>
+                        <LockIcon></LockIcon>
+                    </div>
+                    <div className="pt-4">
+                        <div className="text-xl font-semibold">
+                            Secure & Private
+                        </div>
+                        <div className="text-md text-gray-600 pt-4">
+                            Your financial data is encrypted and stored securely. We never share your information.
+                        </div>    
+                    </div>
+                
+                </div>
+                </div>
+               
             </div>
             <div>
                 
             </div>
         </div>
-       </div>
     )
 }
 export default ExpenseTracker;

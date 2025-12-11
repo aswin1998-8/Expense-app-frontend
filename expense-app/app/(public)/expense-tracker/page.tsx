@@ -7,7 +7,9 @@ import PieChartIcon from "../../../components/icons/piecharticon"
 import MobileIcon from "../../../components/icons/mobileicon"
 import LockIcon from "../../../components/icons/lockicon"
 import Image from "next/image"
+import {useRouter} from "next/navigation"
 const ExpenseTracker = () => {
+    const router = useRouter()
     return (
        <div className="bg-[#F9FAFB] pt-25">
         <div className="max-w-6xl mx-auto mx-6 my-4">
@@ -21,7 +23,7 @@ const ExpenseTracker = () => {
                     </div>
                     <div className="mt-6 flex  col-2">
                         <div className="p-1">
-                        <AppPrimaryButton className="w-52 h-16 flex items-center justify-center" onClick={() => {}}>
+                        <AppPrimaryButton className="w-52 h-16 flex items-center justify-center" onClick={() => router.push("/signup")}>
                             <div className="flex gap-2 items-center justify-center">
                             Get Started Free
                             <ArrowIcon></ArrowIcon>
@@ -29,7 +31,7 @@ const ExpenseTracker = () => {
                         </AppPrimaryButton>
                         </div>
                         <div className="p-1 pl-4">
-                        <button className="border-2 border-gray-300 hover:border-gray-400 text-gray-700 px-8 py-4 rounded-lg font-semibold text-lg transition">
+                        <button className="border-2 border-gray-300 hover:border-gray-400 text-gray-700 px-8 py-4 rounded-lg font-semibold text-lg transition" onClick={() => router.push("/login")}>
                             Sign In
                         </button>
                         </div>

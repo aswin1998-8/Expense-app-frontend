@@ -3,8 +3,10 @@ import React from "react";
 import Link from "next/link";
 import WalletIcon from "../icons/walleticon";
 import AppPrimaryButton from "../appPrimaryButton/appPrimaryButton";
+import {useRouter} from "next/navigation"
 
 const Navbar = () => {
+    const router = useRouter()
     return (
         <nav
         id="navBar"
@@ -27,11 +29,11 @@ const Navbar = () => {
             </div>
 
             <div className="flex items-center gap-4">
-                <span className='text-gray-600  text-md font-medium hover:cursor-pointer' onClick={() => {}}>
+                <span className='text-gray-600  text-md font-medium hover:cursor-pointer' onClick={() => router.push("/login")}>
                 Login 
                 </span>
                 
-                <AppPrimaryButton className="px-4" onClick={() => {}}>
+                <AppPrimaryButton className="px-4" onClick={() => router.push("/signup")}>
                     Sign Up
                 </AppPrimaryButton>
 

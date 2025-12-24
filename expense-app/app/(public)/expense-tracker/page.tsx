@@ -11,7 +11,7 @@ import {useRouter} from "next/navigation"
 const ExpenseTracker = () => {
     const router = useRouter()
     return (
-       <div className="bg-[#F9FAFB] pt-25">
+       <div className="bg-[#F9FAFB] pt-25 min-h-screen">
         <div className="max-w-6xl mx-auto mx-6 my-4">
             <div className="flex items-center justify-between my-8">
                 <div className="w-1/2">

@@ -1,14 +1,17 @@
+"use client";
 import WalletIcon from "../../../components/icons/walleticon";
 import GoogleIcon from "../../../components/icons/googleicon"
 import AppEmailInputField from "../../../components/appEmailInputField/appEmailInputField"
 import AppPasswordInputField from "../../../components/appPasswordField/appPasswordField"
+import AppPrimaryButton from "../../../components/appPrimaryButton/appPrimaryButton"
+import {useRouter} from "next/navigation"
 const login = () => {
-    
-    
+    const router = useRouter()
+       
     return(
-        <div className="bg-[#F9FAFB] flex items-center justify-center">
+        <div className="flex items-center justify-center w-full">
             <div>
-                <div className="flex items-center p-4 gap-6">
+                <div className="flex items-center justify-center p-4 gap-6">
                     <WalletIcon />
                     <span className='text-3xl font-bold'>
                     Expense Tracker
@@ -47,6 +50,19 @@ const login = () => {
                             </div>
                             <div className="pt-6">
                                 <AppPasswordInputField></AppPasswordInputField>
+                            </div>
+                            <div className="flex justify-end pt-6 text-blue-500 hover:underline cursor-pointer text-sm" onClick={() => router.push("/forgot-password")}>
+                                Forgot Password?
+                            </div>
+                            <div className="pt-6">
+                                <AppPrimaryButton className="w-90 flex items-center justify-center" onClick={() => router.push("/home")}>
+                                    <span className="text-sm">Sign In</span>
+                                </AppPrimaryButton>
+                            </div>
+                            <div className="pt-4 flex items-center justify-center">
+                               <div className="text-sm font-medium"> Don't have an account? </div> 
+                               <div className="pl-2 text-blue-500 hover:underline cursor-pointer text-sm" onClick={() => router.push("/signup")}>Sign Up</div> 
+
                             </div>
                         </div>
                     </div>

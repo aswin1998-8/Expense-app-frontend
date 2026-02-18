@@ -31,7 +31,7 @@ const ExpenseTracker = () => {
                         </AppPrimaryButton>
                         </div>
                         <div className="p-1 pl-4">
-                        <button className="border-2 border-gray-300 hover:border-gray-400 text-gray-700 px-8 py-4 rounded-lg font-semibold text-lg transition" onClick={() => router.push("/login")}>
+                        <button className="border-2 cursor-pointer border-gray-300 hover:border-gray-400 text-gray-700 px-8 py-4 rounded-lg font-semibold text-lg transition" onClick={() => router.push("/login")}>
                             Sign In
                         </button>
                         </div>
